@@ -14,10 +14,10 @@ var tableQuery = azure.TableQuery;
 
 var Log = module.exports = exports = function Log(){
     //Instantiate the table service client
-    this.tableClient = azure.createTableService();
+    //this.tableClient = azure.createTableService();
     //For when we need to run outside of the azure emulator locally...
-    /*    this.tableClient = azure.createTableService(ServiceClient.DEVSTORE_STORAGE_ACCOUNT,
-      ServiceClient.DEVSTORE_STORAGE_ACCESS_KEY, ServiceClient.DEVSTORE_TABLE_HOST);*/
+    this.tableClient = azure.createTableService(ServiceClient.DEVSTORE_STORAGE_ACCOUNT,
+    ServiceClient.DEVSTORE_STORAGE_ACCESS_KEY, ServiceClient.DEVSTORE_TABLE_HOST);
 }
 
 /* Initialization method to create our table if it doesn't exist */

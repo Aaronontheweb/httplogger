@@ -7,6 +7,7 @@ var express = require('express')
   , Log = require('./models/log');
 
 var log = new Log();
+log.init(function(){}); //Initialize if we haven't already
 
 var app = module.exports = express.createServer();
 

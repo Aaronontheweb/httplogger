@@ -22,7 +22,7 @@ module.exports = function(app, logs){
         if(!req.body.logMessage) return res.json(
             {error:"Did not pass acceptable HTTP POST arguments. Need to be in the form of logMessage[PROPERTY]."}, 400);
         logs.save(req.body.logMessage, function(error, data){
-            if(!error) return res.json(
+            if(error) return res.json(
             {error:"Unable to save log message", source:req.body.logMessage}, 500);
             res.json({message:"ok"}, 200);
         })

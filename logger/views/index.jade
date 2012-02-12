@@ -3,18 +3,18 @@ h1= title
     table
         tr
             td
-                Log ID
+                b Log ID
             td
-                Timestamp
+                b Timestamp
             td
-                Message
+                b Message
     - each log in logs
         tr
             td
-                log.RowKey
+                p= log.RowKey
             td
-                log.Timestamp
+                p= log.Timestamp
             td
-                log.Message
+                p= log.Message
 - else
     span No recent logs
