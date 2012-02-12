@@ -8,13 +8,14 @@ h1= title
                 b Timestamp
             td
                 b Message
-    - each log in logs
-        tr
-            td
-                p= log.RowKey
-            td
-                p= log.Timestamp
-            td
-                p= log.Message
+        - each log in logs
+                tr
+                    td
+                        p= log.RowKey
+                    td
+                        p #{log.Timestamp}
+                    td
+                        p= log.message
+
 - else
     span No recent logs
