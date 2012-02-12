@@ -28,9 +28,8 @@ Log.prototype.init = function(fn){
 
            //Bail out early if there's an error
            return fn(error);
-       } else (created){
-           console.log('Successfully created table %s', logTableName);
        }
+       console.log('Successfully created table %s', logTableName);
        fn();
     });
 }
