@@ -2,8 +2,13 @@
 /*
  * GET home page.
  */
+ 
+var Log = require('../models/log');
 
-module.exports = function(app, logs){
+var logs = new Log();
+//logs.init(function(){}); //Initialize if we haven't already
+
+module.exports = function(app){
     /*
     * GET / {root}
     */
